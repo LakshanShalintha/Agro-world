@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common'; // Import CommonModule for the currency pipe
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
+  standalone: true, // Indicating that this is a standalone component
+  imports: [CommonModule], // Include CommonModule in the imports array
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'agro-world-frontend';
+  stocks = [
+    { name: 'Apple', price: 150 },
+    { name: 'Tesla', price: 650 },
+    { name: 'Amazon', price: 3400 }
+  ];
 }
